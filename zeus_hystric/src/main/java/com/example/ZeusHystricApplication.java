@@ -11,10 +11,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient  //向服务中心注册
 @EnableHystrix  //开启Hystrix（断路器）
-public class SpringCloudHystricApplication {
+public class ZeusHystricApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudHystricApplication.class, args);
+		SpringApplication.run(ZeusHystricApplication.class, args);
 	}
 
 	/**
