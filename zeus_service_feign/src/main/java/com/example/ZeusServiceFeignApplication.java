@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDiscoveryClient
 @EnableFeignClients
 @ComponentScan(basePackages={"com.example"})
-public class SpringCloudServiceFeignApplication {
+public class ZeusServiceFeignApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudServiceFeignApplication.class, args);
+		SpringApplication.run(ZeusServiceFeignApplication.class, args);
 	}
 }

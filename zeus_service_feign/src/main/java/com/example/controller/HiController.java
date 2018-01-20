@@ -20,6 +20,6 @@ public class HiController {
 
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
     public String sayHi(@RequestParam String name){
-        return schedualService.sayHiFromClientOne(name);
+        return "我是servie-feign：" + schedualService.sayHiFromClientOne(name);
     }
 }
