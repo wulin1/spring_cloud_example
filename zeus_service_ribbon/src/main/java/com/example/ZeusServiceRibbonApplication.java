@@ -9,10 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient  //向服务中心注册
-public class SpringCloudServiceRibbonApplication {
+public class ZeusServiceRibbonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudServiceRibbonApplication.class, args);
+		SpringApplication.run(ZeusServiceRibbonApplication.class, args);
 	}
 
 	/**
