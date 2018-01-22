@@ -1,9 +1,21 @@
-### spring_cloud_example
-spring cloud 微服务示例
 
+最新项目结构
+
+```
+├── spring_cloud_example
+│   ├── zeus_eureka_server      //注册中心 eureka 的 client 端         
+│   ├── zeus_eureka_client      //注册中心 eureka 的 client 端
+│   ├── zeus_service_ribbon     //服务消费 ribbon            
+│   ├── zeus_service_feign      // 服务消费 feign
+│   ├── zeus_hystric            // 断路器 hystric 的 熔断机制
+│   ├── zeus_zuul               // 路由网关 zuul 的 请求分发
+│   ├── zeus_config_server      //配置中心 config 的 server 端          
+│   ├── zeus_config_client      //配置中心 config 的 client 端
+│   └── README.md
+```
 
 #### 1. 参考链接
-  ● [史上最简单的 SpringCloud 教程 | 终章 - 方志朋的专栏 - CSDN博客](http://blog.csdn.net/forezp/article/details/70148833)
+* [史上最简单的 SpringCloud 教程 | 终章 - 方志朋的专栏 - CSDN博客](http://blog.csdn.net/forezp/article/details/70148833)
 
 #### 2. 疑问与解决
 ##### 1. 疑问
@@ -23,7 +35,7 @@ spring cloud 微服务示例
 * 如何进行改变这种扫描包的方式呢，原理很简单就是：@ComponentScan注解进行指定要扫描的包以及要扫描的类。
 
 参考链接:
-* [关于SpringBoot bean无法注入的问题（与文件包位置有关）改变自动扫描的包 - CSDN博客](http://www.itmuch.com/spring-cloud-code-read/spring-cloud-code-read-eureka-registry-appname/)
+* [关于SpringBoot bean无法注入的问题（与文件包位置有关）改变自动扫描的包 - CSDN博客](http://blog.csdn.net/u014695188/article/details/52263903)
 
 
 #### 3.知识点
@@ -46,6 +58,8 @@ eureka server(port:8761) 和 eureka client(port:8762) 启动后，实现服务�
 
 ##### 2. ribbon 服务消费者（rest+ribbon）（2017年11月19号）
 接上节，利用rest+ribbon，实现负载均衡，访问了不同的端口的服务实例。
+
+
 
 此时的架构，如下：
 
