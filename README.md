@@ -3,14 +3,14 @@
 
 ```
 ├── spring_cloud_example
-│   ├── zeus_eureka_server      //注册中心 eureka 的 client 端         
-│   ├── zeus_eureka_client      //注册中心 eureka 的 client 端
-│   ├── zeus_service_ribbon     //服务消费 ribbon            
-│   ├── zeus_service_feign      // 服务消费 feign
-│   ├── zeus_hystric            // 断路器 hystric 的 熔断机制
-│   ├── zeus_zuul               // 路由网关 zuul 的 请求分发
-│   ├── zeus_config_server      //配置中心 config 的 server 端          
-│   ├── zeus_config_client      //配置中心 config 的 client 端
+│   ├── zeus_eureka_server          //注册中心 eureka 的 client 端         
+│   ├── zeus_eureka_client          //注册中心 eureka 的 client 端
+│   ├── zeus_service_ribbon         //服务消费 ribbon            
+│   ├── zeus_service_feign          //服务消费 feign
+│   ├── zeus_hystric                //断路器 hystric 的 熔断机制
+│   ├── zeus_zuul                   //路由网关 zuul 的 请求分发
+│   ├── zeus_config_server          //配置中心 config 的 server 端
+│   ├── zeus_config_client          //配置中心 config 的 client 端
 │   └── README.md
 ```
 
