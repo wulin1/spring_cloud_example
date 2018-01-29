@@ -11,6 +11,7 @@
 │   ├── zeus_zuul                   //路由网关 zuul 的 请求分发
 │   ├── zeus_config_server          //配置中心 config 的 server 端
 │   ├── zeus_config_client          //配置中心 config 的 client 端
+│   ├── zeus_config_eureka_server   //配置中心 config 的 server 端的微服务化（利用eureka）
 │   └── README.md
 ```
 
