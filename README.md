@@ -74,7 +74,6 @@ eureka server(port:8761) 和 eureka client(port:8762) 启动后，实现服务�
 * sercvice-ribbon端口为8764,向服务注册中心注册
 * 当sercvice-ribbon通过restTemplate调用service-hi的hi接口时，因为用ribbon进行了负载均衡，会轮流的调用service-hi：8762和8763 两个端口的hi接口；
 
-
 #### 3. 服务消费者（Feign）（2017年11月19号）
 接上节，利用feign，实现负载均衡，访问了不同的端口的服务实例。
 
@@ -105,15 +104,18 @@ public String hiError(String name) {
 ```
 
 依次启动eureka_server（8761）、eureka_client（8762）、hystric（8764），访问：http://localhost:8764/hi?name=dd，如下图：
+
 ![4.1.png](http://upload-images.jianshu.io/upload_images/3110065-8197e6bac00227e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 将eureka_client（8762）项目停掉，再次访问该页面：
+
 ![4.2.png](http://upload-images.jianshu.io/upload_images/3110065-bd0970740569b419.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 证明：eureka_client（8762） 工程不可用的时候，hystric（8764）调用eureka_client（8762）的API接口时，会执行快速失败，直接返回一组字符串，而不是等待响应超时，这很好的控制了容器的线程阻塞。
 
 #### 5. zuul （2017年12月27号）
 zuul 主要功能 路由转发和过滤器
+
 ![5.1.png](http://upload-images.jianshu.io/upload_images/3110065-0327da1dd1f62a1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 现象（路由转发）：
@@ -149,12 +151,9 @@ Bootstrap.yml（bootstrap.properties）在application.yml（application.properti
 
 ![6.3.png](http://upload-images.jianshu.io/upload_images/3110065-2cce37ec86b09d22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 再启动 client 端 ，访问： http://localhost:8881/hi ，如下图所示：
 
-
 ![6.4.png](http://upload-images.jianshu.io/upload_images/3110065-64cbe613797afa96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 证明： config-client从config-server获取了foo的属性，而config-server是从git仓库读取的,
 
@@ -163,12 +162,15 @@ Bootstrap.yml（bootstrap.properties）在application.yml（application.properti
 ![6.5.png](http://upload-images.jianshu.io/upload_images/3110065-a772e70d27e076c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 7. 高可用配置中心（config 与 eureka）(2018年01月25号)
+
 ![7.1.png](http://upload-images.jianshu.io/upload_images/3110065-7616637a2a598220.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![7.2.png](http://upload-images.jianshu.io/upload_images/3110065-44e3ceb96c59f378.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 访问： http://localhost:8881/hi ，如下图所示：
+
 ![7.3.png](http://upload-images.jianshu.io/upload_images/3110065-d22441be7a0b0efa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 当前架构，如图：
+
 ![7.4.png](http://upload-images.jianshu.io/upload_images/3110065-219a16b211ba42ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
