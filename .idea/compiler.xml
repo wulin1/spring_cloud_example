@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zeus_config_client" />
+        <module name="zeus_config_server" />
+        <module name="zeus_eureka_client" />
+        <module name="zeus_eureka_server" />
+        <module name="zeus_hystric" />
+        <module name="zeus_service_feign" />
+        <module name="zeus_service_ribbon" />
+        <module name="zeus_zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zeus_config_client" target="1.8" />
+      <module name="zeus_config_server" target="1.8" />
+      <module name="zeus_eureka_client" target="1.8" />
+      <module name="zeus_eureka_server" target="1.8" />
+      <module name="zeus_hystric" target="1.8" />
+      <module name="zeus_service_feign" target="1.8" />
+      <module name="zeus_service_ribbon" target="1.8" />
+      <module name="zeus_zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
